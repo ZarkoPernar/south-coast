@@ -1,0 +1,58 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  margin-left: -15px;
+  margin-right: -15px;
+  flex-wrap: wrap; }
+  .row-pad {
+    margin: 0; }
+  .row--align-center {
+    align-items: center; }
+  .row--justify-center {
+    justify-content: center; }
+
+.container {
+  padding: 0 15px;
+  max-width: 1004px;
+  margin: 0 auto; }
+  .container--border-bottom {
+    padding-bottom: 40px;
+    border-bottom: 2px solid #212121; }
+
+.container-fluid {
+  padding: 0 15px;
+  width: 100%;
+  margin: 0; }
+
+.col {
+  padding: 0 15px;
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0; }
+  .col--padd-sm {
+    padding: 0 5px; }
+  .col--sm-8 {
+    flex-basis: 66.66666667%;
+    max-width: 66.66666667%; }
+  .col--sm-6, .col--50, .col--half {
+    flex-basis: 50%;
+    max-width: 50%; }
+  .col--sm-4, .col--33, .col--third {
+    flex-basis: 33.333333%;
+    max-width: 33.333333%; }
+  .col--sm-3, .col--25, .col--fourth {
+    flex-basis: 25%;
+    max-width: 25%; }
+  .col--sm-2 {
+    flex-basis: 16.6666667%;
+    max-width: 16.6666667%; }
+
+.col--pad {
+  padding: 5px; }
+
+.basic-list {
+  padding: 0;
+  list-style: none; }
+  .basic-list__item {
+    padding: 4px 0; }

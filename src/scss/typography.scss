@@ -1,0 +1,32 @@
+@import "variables";
+
+@mixin text-sans {
+    font-family: $font-sans;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: $bc-dark;
+    margin-top: 0;
+    font-family: $font-serif;
+    font-weight: $font-hn;
+}
+
+.text {
+    &--align-center {
+        text-align: center;
+    }
+    &--align-right {
+        text-align: right;
+    }
+
+    &--all-caps {
+        text-transform: uppercase;
+        letter-spacing: 0.6em;
+        font-weight: 700;
+        font-feature-settings: "liga" 1;
+    }
+
+    &--sans-serif {
+        font-family: $font-sans;
+    }
+}

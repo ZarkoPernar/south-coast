@@ -1,0 +1,36 @@
+h1, h2, h3, h4, h5, h6 {
+  color: #2f3148;
+  margin-top: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 700; }
+
+.text--align-center {
+  text-align: center; }
+
+.text--align-right {
+  text-align: right; }
+
+.text--all-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
+  font-weight: 700;
+  font-feature-settings: "liga" 1; }
+
+.text--sans-serif {
+  font-family: "Source Sans Pro", sans-serif; }
+
+.featicon {
+  text-align: center; }
+  .featicon__icon {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px; }
+    .featicon__icon img {
+      max-width: 100%; }
+  .featicon__text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #78909C; }

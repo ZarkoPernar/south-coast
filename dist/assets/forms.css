@@ -1,0 +1,19 @@
+.form__group {
+  margin-bottom: 20px; }
+
+.form__control {
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 2px; }
+  .form__control--bg-dark {
+    background-color: #575b86;
+    box-shadow: 1px 1px 3px #1b1c29;
+    outline: 0; }
+    .form__control--bg-dark:focus {
+      background-color: #8e91b5; }
+
+.form__btn--dark {
+  color: #fff;
+  background-color: #575b86; }
+  .form__btn--dark:hover {
+    background-color: #8e91b5; }
