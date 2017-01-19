@@ -1,18 +1,9 @@
 .wow {
     opacity: 0;
-    transform: translate(0, -30px);
-    transition: .7s ease-out all;
+    transition: .5s ease-out opacity;
     transition-delay: .3s;
-
-    &--left {
-        transform: translate(+30px, 0);
-    }
-    &--right {
-        transform: translate(-30px, 0);
-    }
 
     &.animated {
         opacity: 1;
-        transform: translate(0, 0);
     }
 }
