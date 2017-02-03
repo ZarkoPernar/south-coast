@@ -1,18 +1,6 @@
-var path = require("path");
-module.exports = {
-    entry: './src/app.js',
-    output: {
-        path: __dirname + '/dist',
-        filename: "bundle.js"
-    },
-    module: {
-        loaders: [{
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: "?presets[]=es2015"
-        }, {
-            test: /\.css$/,
-            loader: "style-loader!css-loader"
-        }]
-    }
-};
+var production = require('./tools/webpack.production')
+var development = require('./tools/webpack.development')
+
+const DEV_ENV = process.env.NODE_ENV && process.env.NODE_ENV.trim() === 'production'
+
+module.exports = DEV_ENV ? production : development

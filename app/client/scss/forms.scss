@@ -1,0 +1,84 @@
+@import "variables";
+
+.form {
+
+    &__group {
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    &__control {
+        padding: 4px 8px;
+        border: 0;
+        border-radius: 0;
+
+        
+
+        &--bg-dark {            
+            color: lighten($bc-dark, 40);
+            // background-color: lighten($bc-dark, 20);
+            background-color: $bc-dark;            
+            // box-shadow: 1px 1px 3px darken($bc-dark, 10);
+            outline: 0;
+            border-bottom: 2px solid lighten($bc-dark, 20);
+
+            &:focus {
+                color: #fff;
+                background-color: lighten($bc-dark, 20); 
+
+                &::placeholder {
+                    color: transparent;
+                }  
+                &::-webkit-input-placeholder {
+                    color: transparent;
+                }  
+                &::-webkit-ms-placeholder {
+                    color: transparent;
+                }  
+                &::-moz-placeholder {
+                    color: transparent;
+                }           
+            }
+        }
+    }
+
+    &__label {
+        font-weight: 300;
+        font-size: 1em;
+
+        &--floating {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            margin-bottom: 5px;
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: .3s ease opacity, .3s ease transform;
+        }
+    }
+
+    &__action {
+
+    }
+
+    &__btn {
+
+        &--dark {
+            color: #fff;
+            background-color: lighten($bc-dark, 20);
+
+            &:hover {
+                background-color: lighten($bc-dark, 40);
+            }
+        }
+    }
+}
+
+.btn--submit-dark {
+    background-color: lighten($bc-dark, 50);
+}
+
+.form__control:focus +.form__label--floating {
+    transform: none;
+    opacity: 1;
+}

@@ -1,0 +1,9 @@
+{
+  "firebase": "south-coast",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

@@ -1,0 +1,11 @@
+.aos {
+    &-init {
+        opacity: 0;
+        transition: .5s ease-out opacity;
+        transition-delay: .3s;
+    }
+
+    &-animate {
+        opacity: 1;
+    }
+}
