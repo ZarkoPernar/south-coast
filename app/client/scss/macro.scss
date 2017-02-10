@@ -1,0 +1,105 @@
+@import "variables";
+
+.feat-img {
+    text-align: right;
+    padding-right: 55px;
+}
+
+.macro {
+
+    &__title {
+        font-weight: 900;
+        font-size: 2.5em;
+        line-height: 1.1;
+
+        &--white {
+            color: #6c6f8e;
+
+            .macro__title__highlight {
+                color: $neon-green;
+            }
+        }
+
+        &__highlight {
+            color: lighten($bc-dark, 20);
+        }
+    }
+
+    &__body {
+        margin-top: 35px;
+        color: $text-light;
+        background-color: #fff;
+        padding: 15px 35px;
+        font-size: 1.5em;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+
+    &__text {
+        margin: 15px 0;
+
+        &--bold {
+            font-weight: 600;
+            font-size: .9em;
+        }
+    }
+}
+
+.feature--bg-white {
+    background-position-x: calc(100% + 200px);
+    background-position-y: 20px;
+}
+
+.bg-line {
+    position: relative;
+    left: 10px;
+    display: inline;
+    line-height: 1.5;
+    padding: 0 0 5px;
+    // margin: 0;
+    white-space: pre-wrap;
+    background-color: rgba(255,255,255,.9);
+    box-decoration-break: clone;
+    box-shadow: 10px 0 0 rgba(255,255,255,.9), -10px 0 0 rgba(255,255,255,.9);
+
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -0.25em;
+        right: 100%;
+        bottom: -0.25em;
+        width: 0.25em;
+    }
+}
+
+@media (min-width: 48rem) {
+    .macro {
+        &__title {
+            font-size: 3em;
+        }
+    }
+}
+
+@media (min-width: 75rem) {
+    .macro {
+        &__body {
+            background-color: transparent;
+            padding: 15px 0;
+            margin-top: 0;
+        }
+
+        &__title {
+
+            &.bg-line {
+                position: static;
+                display: block;
+                box-shadow: none;
+                line-height: 1.2;
+                margin: 0;
+                background-color: transparent;
+            }
+        }
+    }
+    
+}

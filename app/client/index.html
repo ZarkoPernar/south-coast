@@ -4,41 +4,56 @@
 <head>
     <title>South Coast</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Oswald:400|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Oswald:400|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+    <nav class="main-nav main-nav--sm" id="nav-sm">
+        <a href="#main-services" class="main-nav__link" alt-text="Usluge">
+            Usluge
+        </a>
+        <a href="#main-about" class="main-nav__link" alt-text="O Nama">
+            O Nama
+        </a>
+        <a href="#main-properties" class="main-nav__link" alt-text="Ville">
+            Apartmani
+        </a>
+        <a href="#main-contact" class="main-nav__link" alt-text="Kontakt">
+            Kontakt
+        </a>
+    </nav>
     <header class="header" id="main-header">
-        <div class="row">           
-            <div class="logo">
-                <img src="img/logo.png" alt="South Coats Logo" class="logo__img"> 
+        <nav class="main-nav main-nav--lg" id="nav-lg">
+            <a href="#main-services" class="main-nav__link" alt-text="Usluge">
+                Usluge
+            </a>
+            <a href="#main-about" class="main-nav__link" alt-text="O Nama">
+                O Nama
+            </a>
 
-                <div class="logo__text">
-                    South Coast
-                </div>
+            <div></div>
+
+            <a href="#main-properties" class="main-nav__link" alt-text="Ville">
+                Apartmani
+            </a>
+            <a href="#main-contact" class="main-nav__link" alt-text="Kontakt">
+                Kontakt
+            </a>
+        </nav>
+
+        <div class="logo">
+            <img src="img/logo-green.png" alt="South Coats Logo" class="logo__img"> 
+
+            <div class="logo__text">
+                South Coast
             </div>
-
-            <nav class="main-nav" id="main-nav">
-                <a href="#main-services" class="main-nav__link" alt-text="Usluge">
-                    Usluge
-                </a>
-                <a href="#main-about" class="main-nav__link" alt-text="O Nama">
-                    O Nama
-                </a>
-                <a href="#main-properties" class="main-nav__link" alt-text="Ville">
-                    Apartmani
-                </a>
-                <a href="#main-contact" class="main-nav__link" alt-text="Kontakt">
-                    Kontakt
-                </a>
-            </nav>
-
-            <button id="main-nav-toggle" class="hamburger">
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-            </button>
         </div>
+
+        <button id="main-nav-toggle" class="hamburger">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+        </button>
     </header>
 
     <div class="start" data-aos>
@@ -49,7 +64,7 @@
                         <h3 class="annouce--small annouce--all-caps annouce--sans-serif">Za Goste</h3>
                     </div>
                     <div class="annouce__item">
-                        <h1 class="annouce__main-title annouce--condensed">
+                        <h1 class="annouce__main-title annouce__main-title--left annouce--condensed">
                             <div class="annouce__main-title__line annouce__main-title__line--with-bg">Pronađite Vašu</div>
                             <div class="annouce__main-title__line annouce__main-title__line--with-bg">sljedeću destinaciju</div>
                         </h1>
@@ -68,7 +83,7 @@
                     </div>
                     <div class="annouce__item annouce--serif ">
                         <h1 class="annouce__main-title annouce__main-title--right">
-                            <div class="annouce__main-title__line">Neka Vaši apartmani</div>
+                            <div class="annouce__main-title__line">Neka Vaše nekretnine</div>
                             <div class="annouce__main-title__line">rade za Vas</div>
                         </h1>
                     </div>
@@ -82,74 +97,206 @@
         </div>
     </div>
     <main class="main-body">
-        <section class="feature feature--bg-white feature--top" id="main-services">
-            <div class="container">
+        <section class="feature feature--top" id="main-services">
+            <div class="service-container">
                 <h1 class="feature__title text--align-center">Naše Usluge</h1>
                 <div class="row row--justify-center row--pad">
-                    <div class="col col--sm-3">
+                    <div class="col col-sm-3 col-lg-2">
                         <div class="featicon">
                             <div class="featicon__icon">
                                 <img src="img/icons/house.png">
                             </div>
                             <p class="featicon__text">
-                                Decorating, preparing, and photographing your properties for rent. Resolving any bureaucratic issue related to renting properties.
+                                Bilo da ste fizička ili pravna osoba, uz pripremanje Vaših nekretnina za iznajmljivanje umjesto 
+                                vas možemo riješiti i potrebnu papirologiju za stavljanje objekta u funkciju te voditi cjelokupnu administraciju
                             </p>
                         </div>
                     </div>
-                    <div class="col col--sm-3">
+                    <div class="col col-sm-3 col-lg-2">
                         <div class="featicon">
                             <div class="featicon__icon">
                                 <img src="img/icons/clean.png">
                             </div>
                             <p class="featicon__text">
-                                Organizing cleaning, linen wash and change, and providing timely fixup of any problems that might arise at your property.
+                                Briga o objektu, nadzor kvalitete čišćenja i pranja posteljina. 
+                                Organizacija popravaka ukoliko su potrebni te kupovina i zamjena potrošnog materijala.
                             </p>
                         </div>
                     </div>
-                    <div class="col col--sm-3">
-                        <div class="featicon">
-                            <div class="featicon__icon">
-                                <img src="img/icons/rent.png">
-                            </div>
-                            <p class="featicon__text">
-                                Publishing listings, corresponding with potential guests, and managing reserveations at all the major booking sites.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col col--sm-3">
+                    
+                    <div class="col col-sm-3 col-lg-2">
                         <div class="featicon">
                             <div class="featicon__icon">
                                 <img src="img/icons/welcome.png">
                             </div>
                             <p class="featicon__text">
-                                Welcoming the guests at the location. We understand that little personal touch leaves a lasting impression.
+                                Prijem gostiju na lokaciji, pružanje svih informacija o kući i okolici gostima te 
+                                prijava gostiju turističkoj zajednici te naplata boravišnih pristojbi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col col-sm-3 col-lg-2">
+                        <div class="featicon">
+                            <div class="featicon__icon">
+                                <img src="img/icons/rent.png">
+                            </div>
+                            <p class="featicon__text">
+                                Objavljivanje objekta na svim popularnim oglašivačkim stranicama. Dnevni nadzor i ažuriranje oglasa, 
+                                pružanje podrške, te odgovaranje na upite u što kraćem roku
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!--<section data-aos style="padding: 100px 0;">
+            <div class="container-fluid">
+                <div class="row" style="justify-content: center;">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="feat-img">
+                            <img src="/img/collage/white.jpeg" alt="white">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="macro">
+                            <div class="macro__wrap">
+                                <h2 class="macro__title">
+                                    Imate nekretninu koju <br> 
+                                    ne <span class="macro__title__highlight">koristite</span>?
+                                </h2>
+                                <p class="macro__body">
+                                    Kratkoročno ili dugoročno – odluka je na vama. A mi ćemo se pobrinuti za sve ostalo! 
+                                    Prvi korak u uspješnom iznajmljivanju nekretnine je njezino uređenje i opremanje te predstavljanje objekta potencijalnom klijentu.
+
+                                </p>
+
+                                <div class="card__action">
+                                    <button class="btn btn--primary">
+                                        Saznajte Više
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+        <section class="feature feature--bg-light feature--bg-left feature--no-padding" id="main-question" style="background-image: url('img/collage/white.jpeg');">
+            <div class="wrapper-inner">
+                <div class="widget-inner">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div data-aos="wow" class="col-md-offset-4 col-md-8 col-lg-offset-6 col-lg-6">
+                                <div class="macro">
+                                    <div class="macro__wrap">
+                                        <h2 class="macro__title bg-line">Imate nekretninu koju ne <span class="macro__title__highlight">koristite</span>?</h2>
+
+                                        <div class="macro__body">
+                                            <p class="macro__text macro__text--bold">
+                                                Kratkoročno ili dugoročno – odluka je na vama. A mi ćemo se pobrinuti za sve ostalo!
+                                            </p>
+
+                                            <p class="macro__text">
+                                                Prvi korak u uspješnom iznajmljivanju nekretnine je njezino uređenje i opremanje 
+                                                te predstavljanje objekta potencijalnom klijentu. Naš stručni tim nudi vam kompletnu uslugu po sistemu 
+                                                „ključ u ruke“ koja uključuje doček gostiju, čišćenje i održavanje objekta, izmjenu posteljine i ručnika, 
+                                                nadopunu potrošnog materijala te sve vrste popravaka čime vam osiguravamo maksimalnu popunjenost, 
+                                                a time i najbolje moguće poslovne rezultate, ali i zadovoljnog gosta koji se svake godine vraća.
+                                            </p>
+                                        </div>
+
+                                        <div class="card__action">
+                                            <button class="btn btn--primary">
+                                                Saznajte Više
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature feature--bg-white feature--bg-right feature--no-padding" id="main-message" 
+            style="background-image: url('img/collage/jumping-women.jpg'); background-size: initial;">
+            <div class="wrapper-inner">
+                <div class="widget-inner">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div data-aos="wow" class="col col-md-8 col-lg-6">
+                                <div class="macro">
+                                    <div class="macro__wrap">
+                                        <h2 class="macro__title macro__title--white bg-line">Kaže se da ne treba kupovati stvari nego <span class="macro__title__highlight">sjećanja.</span></h2>
+
+                                        <div class="macro__body macro__body--no-pad">
+                                            <p class="macro__text macro__text--bold">
+                                                Stručnost, profesionalnost i odgovornost samo su dio naše osobnosti. 
+                                            </p>
+
+                                            <p class="macro__text">
+                                                Bavljenje turizmom u današnje vrijeme znači konstantno osluškivanje i praćenje želja i navika gostiju. 
+                                                Sve većom dostupnošću pametnih telefona i upotrebom aplikacija, ovaj je trend doživio još snažniji uzlet te 
+                                                uzrokovao potpunu preobrazbu turističke ponude u kojoj glavnu riječ vode stranice kao što su Booking.com, Air bnb, Trip Advisor i Flip key. 
+                                            </p>
+
+                                            <p class="macro__text">
+                                                Zahvaljujući dvosmjernoj komunikaciji te stalnim nadogradnjama ovakvih platformi koje nude sve raznolikije usluge putnicima iz cijeloga svijeta 
+                                                neophodno je svakodnevno brinuti o njihovim upitima, rezervacijama, zahtjevima, komentarima i ocjenama, jer će svako nezadovoljstvo nedovoljno 
+                                                brzom ili neodgovarajućom povratnom reakcijom gost kazniti nepovoljnim osvrtnom dostupom cijeloj javnosti, odnosno izborom konkurentskog smještaja pri sljedećem putovanju.  
+                                            </p>
+
+                                            <p class="macro__text macro__text--bold" style="text-align: right">
+                                                Na sreću, zato imate nas.
+                                            </p>
+                                        </div>
+
+                                        <div class="card__action">
+                                            <button class="btn btn--primary">
+                                                Saznajte Više
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="feature feature--bg-light feature--bg-left feature--no-padding" id="main-about" style="background-image: url('img/photo-title.jpg');">
             <div class="wrapper-inner">
                 <div class="widget-inner">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col col--sm-6">
+                            <div class="col col-sm-4 col-md-6">
                             </div>
-                            <div data-aos="wow" class="col col--sm-6">
+                            <div data-aos="wow" class="col col-sm-8 col-md-6">
                                 <div class="card card--padd">
                                     <div class="card__body card__body--border">
                                         <div class="row row--justify-center">
                                             <div class="col">
-                                                <h2 class="card__title">
+                                                <h2 class="card__title card__title--lg">
                                                     O Nama
                                                 </h2>
                                             </div>
                                         </div>
                                         <p class="card__body__text">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis, enim a accumsan fermentum, lectus sapien condimentum
-                                            lacus, at vehicula diam diam vel dolor. Duis mattis, enim a accumsan fermentum,
-                                            lectus sapien condimentum lacus, at vehicula diam diam vel dolor.
+                                            Dočekivanje gostiju u objektu za nas nikako nije puka primopredaja ključeva. 
+                                            S nekima smo se do ovoga trenutka izmijenili desetak mailova, 
+                                            o drugima znamo samo koju hranu vole, treći dolaze kao potpuni stranci…  
+                                            Bez obzira na to tko su i kakvi su, svatko od njih obogatit će naše živote. 
+                                            Zauzvrat, ovo malo vremena koje ćemo s njima provesti  iskoristit ćemo na najbolji 
+                                            mogući način, posvećujući im se u potpunosti pri čemu su upoznavanje s lokacijom, 
+                                            pružanje svih potrebnih informacija, pomoć pri realizaciji posebnih zahtjeva ili želja, 
+                                            otkrivanje lokalnih tajni te mala iznenađenja poput čokoladice na jastuku ili boce vina 
+                                            naši glavni saveznici. Veselimo se unaprijed svim budućim susretima te smo vam zahvalni 
+                                            na prilikama koje zbog vas imamo.  
                                         </p>
                                         <div class="card__action">
                                             <button class="btn btn--primary">
@@ -164,11 +311,11 @@
                 </div>
             </div>
         </section>
-        <section class="feature feature--bg-white" id="main-properties">
-            <div class="container-fluid">
+        <section class="feature" id="main-properties">
+            <div class="container">
                 <h1 class="feature__title text--align-center">Our Properties</h1>
                 <div data-aos="wow" class="row row--justify-center row--pad">
-                    <div class="col col--sm-2 col--feature col--padd-sm">
+                    <div class="col col-sm-6 col-md-4 col-lg-3 col--feature col-padd-sm">
                         <div class="card">
                             <div class="card__body">
                                 <div class="card__image">
@@ -189,7 +336,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col--sm-2 col--feature col--padd-sm">
+                    <div class="col col-sm-6 col-md-4 col-lg-3 col--feature col-padd-sm">
                         <div class="card">
                             <div class="card__body">
                                 <div class="card__image">
@@ -210,7 +357,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col--sm-2 col--feature col--padd-sm">
+                    <div class="col col-sm-6 col-md-4 col-lg-3 col--feature col-padd-sm">
                         <div class="card">
                             <div class="card__body">
                                 <div class="card__image">
@@ -231,7 +378,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col--sm-2 col--feature col--padd-sm">
+                    <div class="col col-sm-6 col-md-4 col-lg-3 col--feature col-padd-sm">
                         <div class="card">
                             <div class="card__body">
                                 <div class="card__image">
@@ -256,11 +403,36 @@
             </div>
         </section>
         <footer class="footer" id="main-contact">
+            <div class="footer__top footer--darker">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="footer__top__item text--align-center">
+                                2017 &copy South Coast d.o.o.
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="footer__top__item text--align-center">
+                                <a href="mailto:iva.pernar@me.com">
+                                    iva.pernar@me.com
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="footer__top__item text--align-center">
+                                <a href="tel:+38598211515">
+                                    +38598211515
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="footer__wrapper">
                 <div class="container">
-                    <h1 class="footer__title text--align-center">Contact</h1>
                     <div class="row">
-                        <div class="col col--sm-6">
+                        <div class="col col-xs-12 col-sm-6">
+                            <h1 class="footer__title">Kontakt</h1>
                             <form action="/post/contact">
                                 <div class="form__group">
                                     <input type="text" id="contact-name" placeholder="Ime" class="form__control form__control--bg-dark">
@@ -280,17 +452,14 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col col--sm-6">
-                            <h2 class="footer__sub-title">Address</h2>
+                        <div class="col col-xs-12 col-sm-6">
+                            <h1 class="footer__title">Adresa</h1>
                             <address class="footer__address">
                                 Gortanova 12 <br> 52100 Pula <br> Croatia <br> 1 (800) 555 1345 <br>
                             </address>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer__bottom">
-                <div class="text--align-center">2017 &copy South Coast d.o.o.</div>
             </div>
         </footer>
     </main>

@@ -28,6 +28,15 @@
     flex-direction: column;
     transform-origin: top;
 
+    &--long {
+        box-shadow: none !important;
+
+        .card__title {
+            padding: 35px;
+            line-height: 1.6;
+        }
+    }
+
     &:after {
         content: '';
         position: absolute;
@@ -60,16 +69,28 @@
             text-align: center;
             font-size: 1rem;
             line-height: 1.5rem;
-            color: #818a9c;
+            color: $text-light;
+
+            &--long {
+                text-align: left;
+                line-height: 1.6;
+                padding: 20px 55px;
+                color: #505867;
+            }
         }
     }
 
     &__title {
         text-align: center;
         padding: 20px;
+        font-weight: 900;
         margin: 0;
         margin-bottom: 15px;
         position: relative;
+
+        &--lg {
+            font-size: 2.5em;
+        }
 
         &:after {
             content: '';
@@ -103,7 +124,7 @@
         animation: expandDown;
         animation-duration: .4s;
         animation-iteration-count: 1;
-        animation-delay: .8s;
+        animation-delay: .3s;
         animation-fill-mode: forwards;
         animation-timing-function: ease;
     }
@@ -114,10 +135,10 @@
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         animation-timing-function: ease;
-        animation-delay: 1.2s;
+        animation-delay: .6s;
     }
 
-    .col:nth-child(1) .card {
+    #main-properties .col:nth-child(1) .card {
         animation-delay: 1s;
 
         &:after {
@@ -125,7 +146,7 @@
         }
     }
 
-    .col:nth-child(2) .card {
+    #main-properties .col:nth-child(2) .card {
         animation-delay: .9s;
 
         &:after {
@@ -133,7 +154,7 @@
         }
     }
 
-    .col:nth-child(3) .card {
+    #main-properties .col:nth-child(3) .card {
         animation-delay: 1.3s;
 
         &:after {
@@ -141,7 +162,7 @@
         }
     }
 
-    .col:nth-child(4) .card {
+    #main-properties .col:nth-child(4) .card {
         animation-delay: 1.15s;
 
         &:after {

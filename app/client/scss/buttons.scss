@@ -38,6 +38,7 @@ a, button {
 
         &:after {
             content: '';
+            background-color: $neon-green;
             position: absolute;
             left: 0;
             top: 0;
@@ -51,7 +52,6 @@ a, button {
 
         &:hover {
             &:after {
-                background-color: $bc-sea;
                 transform: scaleY(1);
             }
         }
