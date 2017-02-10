@@ -18,7 +18,7 @@ module.exports = {
   devServer: CONFIG.WEBPACK_DEV_SERVER_CONFIG,
   plugins: [
     new HtmlWebpackPlugin(CONFIG.HtmlWebpackPlugin),
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('styles.[hash].css'),
     // new OfflinePlugin({
     //   caches: 'all',
     //   externals: ['./index.html']

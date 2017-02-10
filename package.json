@@ -8,6 +8,7 @@
     "start": "npm run server && npm run dev",
     "dev": "node_modules/.bin/webpack -w",
     "build": "SET NODE_ENV=production && webpack --progress -p",
+    "deploy": "npm run build && firebase deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
