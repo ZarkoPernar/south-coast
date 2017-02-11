@@ -220,7 +220,7 @@ body {
         display: inline-block;
         position: relative;
         font-weight: 300;
-        padding: .35em 2em;
+        padding: .35em .5em;
         transition: .2s ease all;
         z-index: 1;
 
@@ -241,7 +241,7 @@ body {
             left: 0;
             width: 100%;
             height: 8px;
-            background-color: rgba($neon-green, .5);
+            background-color: $neon-green;
             transform: scaleY(0);
             transform-origin: bottom;
             transition: .2s ease transform;
@@ -519,196 +519,6 @@ body {
 }
 
 
-.main-body {
-    background: $main-bg;
-    // width: 1300px;
-    margin: 0 auto;
-    border-radius: 3px;
-    position: relative;
-    z-index: 2;
-}
-.main-body__top {
-    width: 100%;
-}
-
-.wrapper, .wrapper-inner {
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-.wrapper-inner {
-    padding: 20px 5px;
-}
-
-.service-container {
-    padding: 0 .5rem;
-}
-
-.feature {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    z-index: 1;
-
-    &--top {
-        position: relative;
-        // top: -100px;
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-
-    &--bg-white {
-        background-color: #fff;
-
-        &:after {
-            display: none !important;
-        }
-    }
-    
-
-    &--bg-right {
-        background-position: top right;
-
-        &:after {
-            background: linear-gradient(to right,rgba(245,245,245,1) 30%,rgba(255,255,255,0) 140%);
-        }
-    }
-
-    &--bg-left {
-        background-position: top left;
-
-        &:after {
-            background: linear-gradient(to left,rgba(245,245,245,1) 30%,rgba(255,255,255,0) 140%);
-        }
-    }
-
-    .widget-inner {
-        position: relative;
-        z-index: 1;
-    }
-
-    &:after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: "";
-        display: block;
-        z-index: -1;
-    }
-}
-
-.row__item--feature {
-    z-index: 2;
-}
-
-.feature {
-    padding: 40px 0;
-
-    &--no-padding {
-        padding: 0;
-    }
-
-    &__title {
-        font-size: 2.5em;
-        color: $bc-dark;
-        // width: 400px;
-        padding-bottom: 20px;
-        margin: 30px auto 50px;
-        position: relative;
-
-        &:after {
-            content: '';
-            width: 20%;
-            height: 2px;
-            background: $bc-dark;
-            display: block;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translate(-50%);
-            z-index: 2;
-        }
-    }
-    &__sub-title {
-        font-size: 2.3em;
-        color: $c-primary;
-    }
-
-    &__subtitle {
-        font-size: 1.2em;
-        color: #6f6f6f;
-        margin-bottom: 10px;
-    }
-
-    &__text {
-        font-weight: 300;
-        font-size: 1.4em;
-        line-height: 1.5;
-    }
-}
-
-.col--feature {
-    margin-bottom: 25px;
-}
-
-.footer {
-    background-color: $bc-dark;
-    color: $bc-light;
-    min-height: 400px;
-    position: relative;
-
-    &__title {
-        color: $bc-light;
-        margin-bottom: 40px;
-    }
-    &__sub-title {
-        font-family: $font-cond;
-        font-weight: 300;
-        color: $bc-light;
-    }
-
-    &__wrapper {
-        padding: 40px 20px;
-    }
-
-    &--darker {
-        color: lighten($bc-dark, 60);
-        background-color: darken($bc-dark, 3);
-    }
-
-    &__top {
-        font-size: 1.3em;
-        font-weight: 300;
-        padding: 10px;
-        // height: 80px;
-
-        &__item {
-            padding: 5px 10px;
-        }
-    }
-
-    &__bottom {
-        font-size: 1.3em;
-        font-weight: 300;
-        padding: 30px;
-        // height: 80px;
-    }
-}
-
-
-@media (min-width: 48em) {
-    .hamburger {
-        display: none;
-    }
-
-    .wrapper-inner{
-        padding: 100px 60px;
-    }
-
-}
-
 @media (min-width: 21rem) {
     .annouce__main-title--left {
         letter-spacing: 7px;
@@ -722,6 +532,10 @@ body {
 }
 
 @media (min-width: 48rem) {
+    .hamburger {
+        display: none;
+    }
+
     .main-nav--sm {
         display: none;
     }
@@ -754,17 +568,16 @@ body {
 
 @media (min-width: 90rem) {
 
-    .footer__top__item {
-        padding: 20px;
-    }
-
     .start__split {
         width: 50%;
         height: 100%;
     }
 
-    .main-nav__link--mover {
-        margin-left: 0;
+    .main-nav--lg {
+        justify-content: initial;
+        
+        .main-nav__link {
+            margin-left: 2em;
+        }
     }
-
 }

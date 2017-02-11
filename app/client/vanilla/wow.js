@@ -45,6 +45,8 @@ export function initWow() {
 function addScroll() {
     let annouce = [...document.querySelectorAll('.annouce')]
     let wh = document.documentElement.clientHeight
+    let backup = fn => fn()
+    let animate = window.requestAnimationFrame || backup
 
     annouce.forEach((el) => {
         el.style.transitionDelay = 'none'
@@ -64,7 +66,7 @@ function addScroll() {
 
         let nextPos = document.documentElement.scrollTop / 2
         annouce.forEach((el) => {
-            requestAnimationFrame(() => {el.style.transform = `translate3d(0, -${nextPos}px, 0)`})
+            animate(() => {el.style.transform = `translate3d(0, -${nextPos}px, 0)`})
         })
     }
 }

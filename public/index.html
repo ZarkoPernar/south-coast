@@ -5,7 +5,7 @@
     <title>South Coast</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:900|Oswald:400|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
-<link href="styles.7c6ae9f52a82711ae378.css" rel="stylesheet"></head>
+<link href="styles.659fb52fdf1457a70103.css" rel="stylesheet"></head>
 
 <body>
     <nav class="main-nav main-nav--sm" id="nav-sm">
@@ -107,8 +107,8 @@
                                 <img src="img/icons/house.png">
                             </div>
                             <p class="featicon__text">
-                                Bilo da ste fizička ili pravna osoba, uz pripremanje Vaših nekretnina za iznajmljivanje umjesto 
-                                vas možemo riješiti i potrebnu papirologiju za stavljanje objekta u funkciju te voditi cjelokupnu administraciju
+                                Pripremamo nekretnine za iznajmljivanje, riješavamo 
+                                potrebnu papirologiju za stavljanje objekta u funkciju, te vodimo cjelokupnu administraciju
                             </p>
                         </div>
                     </div>
@@ -314,17 +314,21 @@
                     <div class="row">
                         <div class="col col-xs-12 col-sm-6">
                             <h1 class="footer__title">Kontakt</h1>
-                            <form action="/post/contact">
+                            <form action="https://api.mailgun.net/v3/sandbox8dafd8fbc03e4ea5982b85d977790df9.mailgun.org/messages" method="post">
                                 <div class="form__group">
-                                    <input type="text" id="contact-name" placeholder="Ime" class="form__control form__control--bg-dark">
+                                    <input type="text" name="name" id="contact-name" placeholder="Ime" class="form__control form__control--bg-dark">
                                     <label class="form__label form__label--floating" for="contact-name">Ime</label>   
                                 </div>
                                 <div class="form__group">
-                                    <input type="text" id="contact-email" placeholder="Email" class="form__control form__control--bg-dark">
+                                    <input type="text" id="contact-email" name="from" placeholder="Email" class="form__control form__control--bg-dark">
                                     <label class="form__label form__label--floating" for="contact-email">Email</label>     
                                 </div>
                                 <div class="form__group">
-                                    <textarea name="name" id="contact-message" placeholder="Poruka" rows="4" cols="40" class="form__control form__control--bg-dark"></textarea>
+                                    <input type="text" id="contact-subject" name="subject" placeholder="Naslov" class="form__control form__control--bg-dark">
+                                    <label class="form__label form__label--floating" for="contact-email">Naslov</label>     
+                                </div>
+                                <div class="form__group">
+                                    <textarea name="text" id="contact-message" placeholder="Poruka" rows="4" cols="40" class="form__control form__control--bg-dark"></textarea>
                                     <label class="form__label form__label--floating" for="contact-message">Poruka</label>   
                                 </div>
 
@@ -345,6 +349,6 @@
         </footer>
     </main>
 
-<script type="text/javascript" src="bundle-7c6ae9f52a82711ae378.js"></script></body>
+<script type="text/javascript" src="bundle-659fb52fdf1457a70103.js"></script></body>
 
 </html>

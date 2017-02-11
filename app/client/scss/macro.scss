@@ -1,5 +1,8 @@
 @import "variables";
 
+$macro-sm-bg: rgba(255,255,255,.9);
+$macro-lg-bg: transparent;
+
 .feat-img {
     text-align: right;
     padding-right: 55px;
@@ -28,7 +31,7 @@
     &__body {
         margin-top: 35px;
         color: $text-light;
-        background-color: #fff;
+        background-color: $macro-sm-bg;
         padding: 15px 35px;
         font-size: 1.5em;
         font-weight: 300;
@@ -58,9 +61,9 @@
     padding: 0 0 5px;
     // margin: 0;
     white-space: pre-wrap;
-    background-color: rgba(255,255,255,.9);
+    background-color: $macro-sm-bg;
     box-decoration-break: clone;
-    box-shadow: 10px 0 0 rgba(255,255,255,.9), -10px 0 0 rgba(255,255,255,.9);
+    box-shadow: 10px 0 0 $macro-sm-bg, -10px 0 0 $macro-sm-bg;
 
 
     &:after {
@@ -84,7 +87,7 @@
 @media (min-width: 75rem) {
     .macro {
         &__body {
-            background-color: transparent;
+            background-color: $macro-lg-bg;
             padding: 15px 0;
             margin-top: 0;
         }
@@ -97,7 +100,7 @@
                 box-shadow: none;
                 line-height: 1.2;
                 margin: 0;
-                background-color: transparent;
+                background-color: $macro-lg-bg;
             }
         }
     }
