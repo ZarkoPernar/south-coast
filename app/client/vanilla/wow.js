@@ -1,10 +1,13 @@
 import AOS from 'aos'
 
+import listing from './listing'
+
 const HEADER_EL = document.getElementById('main-header') 
 
 export function initWow() {
 
     addScroll()
+    listing()
     // initCollage()
 
 
