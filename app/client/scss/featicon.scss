@@ -1,7 +1,35 @@
 @import "typography";
+@import "mixins";
+
+.featicon-col {
+    margin: 0 1.5rem;
+    position: relative;
+    padding-top: 25px !important;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        opacity: 0;
+        transition: .2s ease opacity;
+        background-color: #f5f5f5;
+        border-radius: 2px;
+        @include afterBackground();
+    }
+
+    &:hover {
+        
+        &:after {
+            opacity: 1;
+        }
+    }
+}
 
 .featicon {
     text-align: center;
+    
+    // svg {
+    //     fill: $neon-green;
+    // }
 
     &__icon {
         width: 100px;

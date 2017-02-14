@@ -40,7 +40,8 @@ module.exports = {
           loader: 'css-loader!sass-loader'
         })
         
-      }, {
+      }, 
+      {
         test: /\.css$/,
         // loaders: ['style-loader', 'css-loader'],
         use: ExtractTextPlugin.extract({

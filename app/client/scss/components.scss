@@ -68,6 +68,7 @@
             font-size: 1rem;
             line-height: 1.5rem;
             color: $text-light;
+            overflow: hidden;
 
             &--thanks {
                 text-align: center;
@@ -89,7 +90,7 @@
     &__title {
         text-align: center;
         padding: 20px;
-        font-weight: 900;
+        font-weight: 700;
         margin: 0;
         margin-bottom: 15px;
         position: relative;
@@ -98,17 +99,26 @@
             font-size: 2.5em;
         }
 
+        &:before,
         &:after {
             content: '';
-            width: 20%;
-            height: 3px;
-            background: $c-primary;
+            background-color: $bc-dark;
+            width: 100px;
+            height: 2px;
             display: block;
             position: absolute;
             top: 100%;
             left: 50%;
-            transform: translate(-50%);
+            transform: translate(-60%, -4px);
             z-index: 2;
+        }
+
+        &:before {
+            
+        }
+
+        &:after {
+            transform: translate(-40%, 4px);
         }
     }
 

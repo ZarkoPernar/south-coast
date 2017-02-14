@@ -26,6 +26,32 @@
     padding: 0 .5rem;
 }
 
+[bg-words] {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:before {
+        content: attr(bg-words);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0%, -20%);
+        line-height: 1;
+        opacity: .1;
+        font-size: 3em;
+        z-index: -1;
+    }
+}
+
+#main-services {
+    padding-bottom: 0;
+}
+.services--with-bg {
+    padding-bottom: 180px;
+    background: url('/img/bg/city-drawing.png') no-repeat bottom center;
+}
+
 .feature {
     position: relative;
     background-repeat: no-repeat;
@@ -52,7 +78,7 @@
         background-position: top right;
 
         &:after {
-            background: linear-gradient(to right,rgba(245,245,245,1) 30%,rgba(255,255,255,0) 140%);
+            background: linear-gradient(to right,rgba(245,245,245,1) 45%,rgba(255,255,255,0) 140%);
         }
     }
 
@@ -60,7 +86,7 @@
         background-position: top left;
 
         &:after {
-            background: linear-gradient(to left,rgba(245,245,245,1) 30%,rgba(255,255,255,0) 140%);
+            background: linear-gradient(to left,rgba(245,245,245,1) 45%,rgba(255,255,255,0) 140%);
         }
     }
 
@@ -100,17 +126,26 @@
         margin: 30px auto 50px;
         position: relative;
 
+        &:before,
         &:after {
             content: '';
-            width: 20%;
+            background-color: $bc-dark;
+            width: 100px;
             height: 2px;
-            background: $bc-dark;
             display: block;
             position: absolute;
             top: 100%;
             left: 50%;
-            transform: translate(-50%);
+            transform: translate(-60%, -4px);
             z-index: 2;
+        }
+
+        &:before {
+            
+        }
+
+        &:after {
+            transform: translate(-40%, 4px);
         }
     }
     &__sub-title {

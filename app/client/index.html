@@ -4,7 +4,7 @@
 <head>
     <title>South Coast</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:900|Oswald:400|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Oswald:400|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -99,23 +99,35 @@
     <main class="main-body">
         <section class="feature feature--top" id="main-services">
             <div class="service-container">
-                <h1 class="feature__title text--align-center">Naše Usluge</h1>
-                <div class="row row--justify-center row--pad">
-                    <div class="col col-sm-3 col-lg-2">
+                <h1 class="feature__title text--align-center" >Naše Usluge</h1>
+                <div class="row row--justify-center row--pad services--with-bg">
+                    <div class="col col-sm-3 col-lg-2 featicon-col">
                         <div class="featicon">
                             <div class="featicon__icon">
-                                <img src="img/icons/house.png">
+                                <object type="image/svg+xml" data="icons/contract.svg">
+                                    <style>
+                                        svg {
+                                            fill: #44dea2;
+                                        }
+                                    </style>      
+                                </object>
                             </div>
                             <p class="featicon__text">
                                 Pripremamo nekretnine za iznajmljivanje, riješavamo 
-                                potrebnu papirologiju za stavljanje objekta u funkciju, te vodimo cjelokupnu administraciju
+                                potrebnu papirologiju za stavljanje objekta u funkciju, te vodimo cjelokupnu administraciju.
                             </p>
                         </div>
                     </div>
-                    <div class="col col-sm-3 col-lg-2">
+                    <div class="col col-sm-3 col-lg-2 featicon-col">
                         <div class="featicon">
                             <div class="featicon__icon">
-                                <img src="img/icons/clean.png">
+                                <object type="image/svg+xml" data="icons/towel.svg">
+                                    <style>
+                                        svg {
+                                            fill: #44dea2;
+                                        }
+                                    </style>   
+                                </object>
                             </div>
                             <p class="featicon__text">
                                 Briga o objektu, nadzor kvalitete čišćenja i pranja posteljina. 
@@ -124,10 +136,16 @@
                         </div>
                     </div>
                     
-                    <div class="col col-sm-3 col-lg-2">
+                    <div class="col col-sm-3 col-lg-2 featicon-col">
                         <div class="featicon">
                             <div class="featicon__icon">
-                                <img src="img/icons/welcome.png">
+                                <object type="image/svg+xml" data="icons/key.svg">
+                                    <style>
+                                        svg {
+                                            fill: #44dea2;
+                                        }
+                                    </style>      
+                                </object>
                             </div>
                             <p class="featicon__text">
                                 Prijem gostiju na lokaciji, pružanje svih informacija o kući i okolici gostima te 
@@ -136,14 +154,20 @@
                         </div>
                     </div>
 
-                    <div class="col col-sm-3 col-lg-2">
+                    <div class="col col-sm-3 col-lg-2 featicon-col">
                         <div class="featicon">
                             <div class="featicon__icon">
-                                <img src="img/icons/rent.png">
+                                <object type="image/svg+xml" data="icons/calendar.svg" style="position: relative; right: -10px">
+                                    <style>
+                                        svg {
+                                            fill: #44dea2;
+                                        }
+                                    </style>      
+                                </object>
                             </div>
                             <p class="featicon__text">
                                 Objavljivanje objekta na svim popularnim oglašivačkim stranicama. Dnevni nadzor i ažuriranje oglasa, 
-                                pružanje podrške, te odgovaranje na upite u što kraćem roku
+                                pružanje podrške, te odgovaranje na upite u što kraćem roku.
                             </p>
                         </div>
                     </div>
@@ -198,7 +222,7 @@
                             <div data-aos="wow" class="col col-md-8 col-lg-6">
                                 <div class="macro">
                                     <div class="macro__wrap">
-                                        <h2 class="macro__title macro__title--white bg-line">Kaže se da ne treba kupovati stvari nego <span class="macro__title__highlight">sjećanja.</span></h2>
+                                        <h2 class="macro__title macro__title--white bg-line" >Kaže se da ne treba kupovati stvari nego <span class="macro__title__highlight">sjećanja.</span></h2>
 
                                         <div class="macro__body macro__body--no-pad">
                                             <p class="macro__text macro__text--bold">
@@ -283,6 +307,15 @@
                 </div>
             </div>
         </section>
+
+        <section id="main-properties" hidden>
+            <div class="container">
+                <h1 class="feature__title text--align-center">Nasi Apartmani</h1>
+                <div data-aos class="row row--justify-center row--pad">
+                </div>
+            </div>
+        </section>
+
         <footer class="footer" id="main-contact">
             <div class="footer__top footer--darker">
                 <div class="container">
@@ -314,7 +347,7 @@
                     <div class="row">
                         <div class="col col-xs-12 col-sm-6">
                             <h1 class="footer__title">Kontakt</h1>
-                            <form action="https://api.mailgun.net/v3/sandbox8dafd8fbc03e4ea5982b85d977790df9.mailgun.org/messages" method="post">
+                            <form action="/send/email" method="post" id="contact-form">
                                 <div class="form__group">
                                     <input type="text" name="name" id="contact-name" placeholder="Ime" class="form__control form__control--bg-dark">
                                     <label class="form__label form__label--floating" for="contact-name">Ime</label>   
@@ -328,7 +361,7 @@
                                     <label class="form__label form__label--floating" for="contact-email">Naslov</label>     
                                 </div>
                                 <div class="form__group">
-                                    <textarea name="text" id="contact-message" placeholder="Poruka" rows="4" cols="40" class="form__control form__control--bg-dark"></textarea>
+                                    <textarea name="text" id="contact-message" placeholder="Poruka" class="form__control form__control--bg-dark"></textarea>
                                     <label class="form__label form__label--floating" for="contact-message">Poruka</label>   
                                 </div>
 
