@@ -12,14 +12,14 @@ let list = require('./list.json')
 app.set('port', (process.env.PORT || 5000))
 
 
-app.use(express.static(PUBLIC_DIR))
+app.use(express.static(PUBLIC_DIR, {
+    setHeaders(res) {
+        res.removeHeader('X-Frame-Options')
+        res.setHeader('X-Frame-Options', 'SAMEORIGIN')
+        return res
+    }
+}))
 app.use(bodyParser.json())
-app.use(function (req, res, next) {
-    res.removeHeader('X-Frame-Options')
-    res.setHeader('X-Frame-Options', 'SAMEORIGIN')
-    next()
-  }
-)
 // app.use(checkUserAgent)
 
 app.listen(app.get('port'), function () {
