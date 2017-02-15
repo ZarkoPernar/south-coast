@@ -7,8 +7,8 @@ function sendEmail({from, subject, name, text}) {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'zarkopernar@gmail.com',
-            pass: 'Kasmir34'
+            user: global.proccess.env.EMAIL,
+            pass: global.proccess.env.EMAIL_PASSWORD
         }
     })
 
