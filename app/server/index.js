@@ -11,6 +11,11 @@ let list = require('./list.json')
 
 app.set('port', (process.env.PORT || 5000))
 
+app.use(function (req, res, next) {
+    res.setHeader('X-Frame-Options', 'SAMEORIGIN')
+    next()
+  }
+)
 app.use(express.static(PUBLIC_DIR))
 app.use(bodyParser.json())
 // app.use(checkUserAgent)
