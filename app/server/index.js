@@ -12,6 +12,7 @@ let list = require('./list.json')
 app.set('port', (process.env.PORT || 5000))
 
 app.use(function (req, res, next) {
+    res.removeHeader('X-Frame-Options')
     res.setHeader('X-Frame-Options', 'SAMEORIGIN')
     next()
   }
