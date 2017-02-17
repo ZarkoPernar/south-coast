@@ -1,0 +1,13 @@
+
+.apt-container {
+    padding: 0 1rem;
+}
+.apt-scroll.row {
+    overflow-x: scroll;
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+    [class*="col-"] {
+        padding: 0 1rem;
+    }
+}

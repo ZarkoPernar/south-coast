@@ -64,7 +64,8 @@
         }
 
         &__text {
-            padding: 0 20px;
+            padding: 0 30px;
+            margin: 0 0 15px 0;
             font-size: 1rem;
             line-height: 1.5rem;
             color: $text-light;
@@ -75,7 +76,6 @@
                 width: 85%;
                 margin: 10px auto;
                 font-weight: 600;
-                font-size: .9em;
             }
 
             &--long {
@@ -88,8 +88,9 @@
     }
 
     &__title {
+        font-size: 2em;
         text-align: center;
-        padding: 20px;
+        padding: 25px;
         font-weight: 700;
         margin: 0;
         margin-bottom: 15px;
@@ -99,19 +100,6 @@
             font-size: 2.5em;
         }
 
-        &:before,
-        &:after {
-            content: '';
-            background-color: $bc-dark;
-            width: 100px;
-            height: 2px;
-            display: block;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translate(-60%, -4px);
-            z-index: 2;
-        }
 
         &:before {
             

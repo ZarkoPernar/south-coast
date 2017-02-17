@@ -44,6 +44,10 @@
     }
 }
 
+.linked-section {
+    padding-top: 50px;
+}
+
 #main-services {
     padding-bottom: 0;
 }
@@ -171,6 +175,7 @@
 }
 
 .footer {
+    // margin-top: 50px;
     background-color: $bc-dark;
     color: $bc-light;
     min-height: 400px;

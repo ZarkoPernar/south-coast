@@ -1,5 +1,7 @@
 export default init
 
+import '../scss/aptscroll.scss'
+
 function init() {
     const url = '/list'
     let main = document.getElementById('main-properties')
@@ -31,7 +33,7 @@ function build(list) {
     return frag
 }
 
-function createApt({name, summary, picture_url}) {
+function createApt({id, name, summary, picture_url}) {
     let col = document.createElement('div')
 
     let card = document.createElement('div')
@@ -47,7 +49,7 @@ function createApt({name, summary, picture_url}) {
     let aptText = document.createTextNode(summary)
 
     let card__action = document.createElement('div')
-    let button = document.createElement('button')
+    let button = document.createElement('a')
     let buttonText = document.createTextNode('Pogledaj')    
     
 
@@ -60,6 +62,7 @@ function createApt({name, summary, picture_url}) {
     card__body__text.className = 'card__body__text'
     card__action.className = 'card__action'
     button.className = 'btn btn--primary'
+    button.href = 'https://www.airbnb.com/rooms/' + id
     
 
     col.appendChild(card)

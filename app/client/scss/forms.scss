@@ -10,7 +10,8 @@
     &__control {
         padding: 4px 8px;
         border: 0;
-        border-radius: 0;      
+        border-radius: 0;  
+        width: 70%;    
 
         &--bg-dark {            
             color: lighten($bc-dark, 40);

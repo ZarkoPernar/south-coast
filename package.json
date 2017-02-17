@@ -51,6 +51,7 @@
     "date-fns": "^1.21.0",
     "express": "^4.14.0",
     "flexboxgrid": "^6.3.1",
+    "flipjs": "^2.0.0",
     "lodash": "^4.17.2",
     "mongoose": "^4.7.1",
     "mongoose-geojson-schema": "^2.1.2",
@@ -65,6 +66,7 @@
     "request": "^2.79.0",
     "request-promise": "^4.1.1",
     "request-promise-native": "^1.0.3",
+    "smoothscroll-polyfill": "^0.3.4",
     "whatwg-fetch": "^1.0.0"
   }
 }

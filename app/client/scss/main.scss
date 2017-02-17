@@ -317,7 +317,18 @@ body {
         &--left {
             background: url('../img/main.jpg') top left no-repeat;
             background-size: cover;
-            display: none;
+            // display: none;
+
+            .btn--annouce {
+                background-color: $bc-dark;
+                color: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                transition: .2s ease background-color;
+
+                &:hover {
+                    background-color: lighten($bc-dark, 10);
+                }
+            }
 
             &:after {
                 background: rgba(247, 247, 247, 0.52);
@@ -332,6 +343,7 @@ body {
             .btn--annouce {
                 background-color: $neon-green;
                 color: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.30);
             }
 
             .annouce {
@@ -360,6 +372,14 @@ body {
         height: 0;
         clear: both;
     }
+}
+
+.aos-init.btn--annouce {
+    opacity: 0;
+    transition: .2s ease background-color, .2s ease opacity;
+}
+.aos-animate.btn--annouce {
+    opacity: 1;
 }
 
 .aos-animate {
@@ -481,7 +501,7 @@ body {
         &__line {
             display: inline-block;
             padding: 2px 11px;
-            margin-top: 2px;
+            margin-top: 4px;
         }
 
         &__line--with-bg {
@@ -491,7 +511,8 @@ body {
             transition: .3s ease transform;
             transform-origin: left;
             transition-delay: 1.5s;
-            background-color: rgba(255, 255, 255, 0.79);
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 1px 4px rgba(70,70,70,.1);
 
             &:last-child {
                 transition-delay: 1.7s;
@@ -568,9 +589,13 @@ body {
 }
 
 @media (min-width: 90rem) {
+    .annouce__main-title {
+        font-size: 3.5em;
+        max-width: 960px;
+    }
 
     .start__split {
-        width: 50%;
+        // width: 50%;
         height: 100%;
     }
 
