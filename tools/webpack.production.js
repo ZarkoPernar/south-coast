@@ -13,15 +13,42 @@ module.exports = {
   ],
   output: {
     path: CONFIG.CLIENT_OUTPUT_PATH,
-    filename: 'bundle-[hash].js',
+    filename: 'bundle-[chunkhash].js',
   },
   devServer: CONFIG.WEBPACK_DEV_SERVER_CONFIG,
   plugins: [
-    new HtmlWebpackPlugin(CONFIG.HtmlWebpackPlugin),
-    new ExtractTextPlugin('styles.[hash].css'),
+    new ExtractTextPlugin('styles.[chunkhash].css'),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'commons',
+    //   filename: 'commons.js',
+    //   minChunks: 2,
+    // }),
+    new HtmlWebpackPlugin(Object.assign({}, CONFIG.HtmlWebpackPlugin, {
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        // removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
+      inject: true,
+    })),
+    // fucking bullshit
     // new OfflinePlugin({
-    //   caches: 'all',
-    //   externals: ['./index.html']
+    //   relativePaths: false,
+    //   autoUpdate: true,
+    //   publicPath: '/',
+    //   main: [':rest:'],
+    //   // externals: ['./index.html'] causes issues with updating the service worker
+    //   AppCache: false,
+    //   ServiceWorker: {
+    //     events: true
+    //   }
     // }),
   ],
   module: {
@@ -51,10 +78,21 @@ module.exports = {
         })
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(gif|png|jpe?g|svg)$/i,
         loaders: [
-            'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+          'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              progressive: true,
+              optimizationLevel: 7,
+              interlaced: false,
+              pngquant: {
+                quality: '65-90',
+                speed: 4
+              }
+            }
+          }
         ]
       },
     ]

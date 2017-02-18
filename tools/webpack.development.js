@@ -9,7 +9,7 @@ var CONFIG = require('./config')
 module.exports = {
   devtool: 'eval-source-map',
   entry: [
-    CONFIG.APP_PATH + CONFIG.CLIENT_APP_PATH + CONFIG.CLIENT_ENTRY_FILE
+    CONFIG.APP_PATH + CONFIG.CLIENT_APP_PATH + CONFIG.CLIENT_ENTRY_FILE,
   ],
   output: {
     path: CONFIG.CLIENT_OUTPUT_PATH,
@@ -20,6 +20,12 @@ module.exports = {
     new HtmlWebpackPlugin(CONFIG.HtmlWebpackPlugin),
     new webpack.NoEmitOnErrorsPlugin(),
     new ExtractTextPlugin('styles.css'),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'commons',
+    //   filename: 'commons.js',
+    //   minChunks: 2,
+    // }),
+
   ],
   module: {
     rules: [
@@ -50,12 +56,12 @@ module.exports = {
         })
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(gif|png|jpe?g|svg)$/i,
         loaders: [
-            'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+          'file-loader',
+          'image-webpack-loader',
         ]
       },
     ]
-  }
+  },
 }
